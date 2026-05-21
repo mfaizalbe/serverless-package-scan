@@ -2,8 +2,8 @@
 
 terraform {
   backend "s3" {
-    bucket = "sctp-ce11-tfstate"
+    bucket = "sctp-ce12-tfstate-bucket"
     key    = "package-vul-scan-faizal.tfstate" #Change the value of this to <your suggested name>.tfstate for  example
-    region = "us-east-1"
+    region = "ap-southeast-1"
   }
 }
