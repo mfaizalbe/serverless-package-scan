@@ -26,6 +26,12 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
 
+    - name: Clean Terraform cache
+      run: rm -rf .terraform
+
+    - name: Terraform Init
+      run: terraform init -upgrade -reconfigure -input=false
+
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -check
