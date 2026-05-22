@@ -30,7 +30,7 @@ resource "aws_iam_role" "iam_for_lambda" {
 
 resource "aws_iam_role_policy" "cloudwatch_policy" {
   name = "cloudwatch-policy"
-  role = aws_iam_role.lambda_role.id
+  role = aws_iam_role.iam_for_lambda.id
 
   policy = data.aws_iam_policy_document.inline_policy_cloudwatch.json
 }
